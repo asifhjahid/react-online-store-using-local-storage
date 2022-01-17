@@ -16,8 +16,11 @@ export default function Product({
                     onMouseEnter={()=>setHover(true)}
                     onMouseLeave={()=>setHover(false)}
                     >
-                      
-                        <img src={imageUrl} alt={name} />
+                        <div className='addToCart'>
+                                <button type='button'>Add To Cart</button>
+                        </div>
+                      <div className='cart'>
+                      <img src={imageUrl} alt={name} />
                         <div className='name'>{name}</div>
                         <div className='price'>Price: {price}</div>
                         <div>
@@ -36,6 +39,7 @@ export default function Product({
                             ))
                         }
                         </div>
+                      </div>
                     </div>
             </ProductStyle>
     )
