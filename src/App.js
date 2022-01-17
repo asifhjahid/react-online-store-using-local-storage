@@ -3,7 +3,7 @@ import './App.css';
 import Layout from './components/Layout';
 import About from './pages/About';
 import Home from './pages/Home';
-import Products from './pages/Products';
+import ProductPage from './pages/ProductPage';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
          <Routes>
            <Route path='/' element={<Home />} />
            <Route path='/about' element={<About />} />
-           <Route path='/products' element={<Products />} />
+           <Route path='/products' element={<ProductPage />} />
   
          </Routes>
        </Layout>
