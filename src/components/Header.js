@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import { getCartItems } from '../context/productContext'
+import cartContext from '../context/cartContex'
 import HeaderStyle from '../style/Header.styles'
 
 export default function Header() {
+    const ctx = useContext(cartContext)
     return (
         <HeaderStyle>
             <ul>
@@ -20,7 +21,7 @@ export default function Header() {
                     </li>
                    
                     <li>
-                    <Link to='/cart'>Cart:</Link> ({getCartItems().length})
+                    <Link to='/cart'>Cart:</Link> ({ctx.cart.length})
                      </li>                    
                 </ul>
         </HeaderStyle>
