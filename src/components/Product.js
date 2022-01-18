@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { addToCart } from '../context/productContext';
 import ProductStyle from '../style/Product.styles';
 
 export default function Product({
+    id,
     name,
     imageUrl,
     price,
@@ -17,7 +19,11 @@ export default function Product({
                     onMouseLeave={()=>setHover(false)}
                     >
                         <div className='addToCart'>
-                                <button type='button'>Add To Cart</button>
+                                <button type='button' onClick={()=>addToCart({
+                                    id,
+                                    name,
+                                    price,
+                                })}>Add To Cart</button>
                         </div>
                       <div className='cart'>
                       <img src={imageUrl} alt={name} />

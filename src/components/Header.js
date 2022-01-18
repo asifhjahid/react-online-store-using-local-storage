@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { getCartItems } from '../context/productContext'
 import HeaderStyle from '../style/Header.styles'
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
                     </li>
                    
                     <li>
-                    <Link to='/cart'>Cart:</Link> (0)
+                    <Link to='/cart'>Cart:</Link> ({getCartItems().length})
                      </li>                    
                 </ul>
         </HeaderStyle>
