@@ -5,7 +5,7 @@ export function addToCart(product){
 
 export function getCartItems(){
     const data = localStorage.getItem('cart');
-    if(! data ) return [];
+    if(!data ) return [];
     return JSON.parse(data);
 
 }
